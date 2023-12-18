@@ -3,10 +3,18 @@
   "version": "1.0.0",
   "description": "Marine Landing Notary Public website",
   "scripts": {
+    "dev": "hugo --watch server",
+    "get-hours": "node get-hours.mjs",
     "build": "hugo",
     "format": "prettier *.js layouts src static",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jin Park, Bart Nagel",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@netlify/functions": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4"
+  }
 }

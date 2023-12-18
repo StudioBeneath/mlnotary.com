@@ -10,8 +10,16 @@
     </div>
     <div class="column:12 column@sm:6 padding:u8 padding@sm:u10 padding-y@sm:10vh font-size:h6">
       <div class="row margin-bottom:10">
-        <div class="column:12 column@sm:8 markup">
-          {{ .Content | markdownify }}
+        <div class="column:12 column@sm:8">
+          <div class="markup">
+            {{ .Content | markdownify }}
+          </div>
+          <h6 class="margin-top:u6 margin-bottom:u4">Opening hours</h6>
+          <ul class="list">
+            {{ range .Site.Data.hours.result.opening_hours.weekday_text }}
+              <li>{{ . }}</li>
+            {{ end }}
+          </ul>
         </div>
       </div>
     </div>
