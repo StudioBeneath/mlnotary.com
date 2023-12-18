@@ -1,5 +1,8 @@
 [build.environment]
   HUGO_VERSION = "0.120.4"
+[build]
+  publish = "public/"
+  command = "npm run get-hours && npm run build"
 [[redirects]]
   from = "/services/"
   to = "/services/real-estate-purchase-and-sale/"
